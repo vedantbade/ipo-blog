@@ -1,6 +1,17 @@
 import { getPostBySlug } from "@/lib/posts";
 import type { Metadata } from "next";
 
+import { getAllPosts } from "@/lib/posts";
+
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+
 export async function generateMetadata({
   params,
 }: {
