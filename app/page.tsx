@@ -15,9 +15,12 @@ export default function Home() {
 
   return (
     <main className="min-h-screen max-w-3xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8">
+      <h1 className="text-4xl font-bold mb-4">
         IPO Reviews & Risk Analysis
       </h1>
+      <p className="text-gray-600 mb-8">
+        Simple, unbiased IPO analysis for retail investors.
+      </p>
 
       <ul className="space-y-6">
         {posts.map((post) => (

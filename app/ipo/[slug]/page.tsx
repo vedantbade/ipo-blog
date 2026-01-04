@@ -49,14 +49,35 @@ export default async function IpoPage({
   }
 
   return (
-    <main className="min-h-screen max-w-3xl mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <p className="text-gray-500 mb-6">{post.date}</p>
+    <main className="min-h-screen max-w-3xl mx-auto p-6">
+      <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-sm p-6">
+        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+        <p className="text-gray-500 mb-6">{post.date}</p>
 
-      <article
-        className="prose prose-gray"
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-      />
+        <article
+          className="
+            prose 
+            prose-lg 
+            prose-gray
+            dark:prose-invert 
+            max-w-none
+            prose-h2:border-b 
+            prose-h2:pb-2 
+            prose-h2:mt-10
+            prose-table:w-full
+            prose-table:border
+            prose-table:border-gray-700
+            prose-th:border
+            prose-td:border
+            prose-th:px-3
+            prose-td:px-3
+            prose-th:py-2
+            prose-td:py-2
+          "
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        />
+      </div>
+
     </main>
   );
 }
